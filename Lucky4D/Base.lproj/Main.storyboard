@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fIR-ul-BBI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FirstVC-->
+        <scene sceneID="p0n-B8-S2I">
+            <objects>
+                <viewController id="fIR-ul-BBI" customClass="firstVC" customModule="Lucky4D" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nml-0f-P7i"/>
+                        <viewControllerLayoutGuide type="bottom" id="lBK-py-6N5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eId-zV-gTb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjQ-dh-3by">
+                                <rect key="frame" x="86" y="313" width="202" height="41"/>
+                                <color key="backgroundColor" red="0.31764705879999999" green="0.64313725489999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                <state key="normal" title="FEELING LUCKY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xIU-J6-hGm" kind="presentation" id="4gw-cO-jN4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto notify me a lucky 4D numbers everyday" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T47-lS-2tt">
+                                <rect key="frame" x="0.0" y="588.5" width="375" height="17.5"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="71I-gq-TSo">
+                                <rect key="frame" x="163" y="616" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Fev-9D-5xA"/>
+                                    <constraint firstAttribute="width" constant="49" id="uwG-0x-cTt"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="switchClicked:" destination="fIR-ul-BBI" eventType="valueChanged" id="OVU-en-3a7"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31764705879999999" green="0.64313725489999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lBK-py-6N5" firstAttribute="top" secondItem="71I-gq-TSo" secondAttribute="bottom" constant="20" id="1Lb-U2-bXL"/>
+                            <constraint firstItem="71I-gq-TSo" firstAttribute="top" secondItem="T47-lS-2tt" secondAttribute="bottom" constant="10" id="HVk-PS-MdY"/>
+                            <constraint firstItem="BjQ-dh-3by" firstAttribute="centerY" secondItem="eId-zV-gTb" secondAttribute="centerY" id="Q8x-e2-zgz"/>
+                            <constraint firstItem="T47-lS-2tt" firstAttribute="leading" secondItem="eId-zV-gTb" secondAttribute="leading" id="ShY-Jp-17q"/>
+                            <constraint firstItem="71I-gq-TSo" firstAttribute="centerX" secondItem="eId-zV-gTb" secondAttribute="centerX" id="UNB-8r-1GT"/>
+                            <constraint firstItem="BjQ-dh-3by" firstAttribute="centerX" secondItem="eId-zV-gTb" secondAttribute="centerX" id="Xra-bY-85m"/>
+                            <constraint firstAttribute="trailing" secondItem="T47-lS-2tt" secondAttribute="trailing" id="aQa-k2-5Ya"/>
+                            <constraint firstItem="T47-lS-2tt" firstAttribute="centerX" secondItem="eId-zV-gTb" secondAttribute="centerX" id="n5h-ty-0Iz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="strikeBtn" destination="BjQ-dh-3by" id="TfZ-tk-gfI"/>
+                        <outlet property="switchBtn" destination="71I-gq-TSo" id="arq-wV-u8x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80A-Dq-07Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="34"/>
+        </scene>
+        <!--NumbersVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="numbersVC" customModule="Lucky4D" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg9-94-rr5">
+                                <rect key="frame" x="0.0" y="358" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="z0Z-Dq-saK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Lucky Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQk-m8-Jb6">
+                                <rect key="frame" x="54" y="149" width="266" height="29"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31764705879999999" green="0.64313725489999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bg9-94-rr5" secondAttribute="trailing" id="Cuu-4E-xvJ"/>
+                            <constraint firstItem="bg9-94-rr5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vvx-rJ-V5D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aQk-m8-Jb6" secondAttribute="trailing" constant="39" id="Yn2-Zn-emP"/>
+                            <constraint firstItem="bg9-94-rr5" firstAttribute="top" secondItem="aQk-m8-Jb6" secondAttribute="bottom" constant="180" id="oOr-MB-LsP"/>
+                            <constraint firstItem="aQk-m8-Jb6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="rn0-BL-QC8"/>
+                            <constraint firstItem="aQk-m8-Jb6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="yE5-94-r2h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xbe-ZX-jZH">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ko3-ee-tLe">
+                            <connections>
+                                <action selector="backBtn:" destination="BYZ-38-t0r" id="59U-Zd-7yx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="groundView" destination="bg9-94-rr5" id="Chm-IS-Dn8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1439" y="34"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M6x-Eg-uBT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xIU-J6-hGm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HPS-g2-fI5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="50T-52-9lq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jgv-Tq-wl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="34"/>
+        </scene>
+    </scenes>
+</document>
