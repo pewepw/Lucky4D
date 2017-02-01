@@ -33,8 +33,8 @@ class firstVC: UIViewController {
         content.body = String(arc4random_uniform(9999))
         
         var dateComponents = DateComponents()
-        dateComponents.hour = 3
-        dateComponents.minute = 26
+        dateComponents.hour = 10
+        dateComponents.minute = 00
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         let request = UNNotificationRequest(identifier: "Lucky4D", content: content, trigger: trigger)
